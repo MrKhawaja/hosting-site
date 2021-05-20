@@ -1,71 +1,77 @@
-:root{
-    --primarylight: #eeaeca;
-    --primaryhover: #f2c0d5;
-    --secondarylight: #94bbe9;
-    --primary: #db5790;
-    --secondary: #2b7ad4;
-    --light:#f2f2f2;
+:root {
+  --primarylight: #eeaeca;
+  --primaryhover: #ffffff3a;
+  --secondarylight: #94bbe9;
+  --primary: #db5790;
+  --secondary: #2b7ad4;
+  --light: #f2f2f2;
 }
 
-body{
-    font-family: Arial, Helvetica, sans-serif;
+body {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-header{
-    background: linear-gradient(180deg, var(--primarylight) 0%, var(--secondarylight) 100%);
-    padding-bottom: 11rem;
+header {
+  background: linear-gradient(180deg, var(--primarylight) 0%, var(--secondarylight) 100%);
+  padding-bottom: 11rem;
+  border-radius: 0 0 0 500rem;
 }
 
-nav{
-    padding-right: 2rem;
-    padding-top: 1.5rem;
-    width: 100vw;
-    display: flex;
-    flex-direction: row-reverse;
+nav {
+  padding-right: 2rem;
+  padding-top: 1.5rem;
+  display: flex;
+  flex-direction: row-reverse;
 }
 
-.nav-link{
-    margin-right: .4em;
-    text-decoration: none;
-    color:white;
-    padding:1em .8em;
-    border-radius: 1em;
+.nav-link {
+  margin-right: 1em;
+  text-decoration: none;
+  color: white;
+  padding: 1em 0.8em;
+  border-radius: 1em;
 }
-.nav-link:hover{
-    background: var(--primaryhover);
+.nav-link:hover {
+  background: var(--primaryhover);
 }
-.nav-link.active{
-    background: var(--primaryhover);
-}
-
-.logo-box{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 4rem;
-    color:black;
-    padding-top: 3rem;
+.nav-link.active {
+  background: var(--primaryhover);
 }
 
-.logo-box .logo{
-    margin:0;
+.logo-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  color: black;
+  padding-top: 3rem;
 }
 
-.plate{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding:4rem;
-    min-height: 15rem;
+.logo-box .logo {
+  margin: 0;
 }
 
-.plate h3{
-    margin:0;
-    margin-bottom: 2.5rem;
-    font-size: 2.5rem;
+.plate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 4rem;
+  min-height: 15rem;
 }
-.plate p{
-    margin:0
+
+.plate h3 {
+  margin: 0;
+  margin-bottom: 2.5rem;
+  font-size: 2.5rem;
+}
+.plate p {
+  margin: 0;
+}
+
+@media screen and (max-width: 900px) {
+  header {
+    border-radius: 0 0 0 10rem;
+  }
 }
