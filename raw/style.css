@@ -13,7 +13,7 @@ body{
 
 header{
     background: linear-gradient(180deg, var(--primarylight) 0%, var(--secondarylight) 100%);
-    padding-bottom: 5rem;
+    padding-bottom: 11rem;
 }
 
 nav{
@@ -50,4 +50,22 @@ nav{
 
 .logo-box .logo{
     margin:0;
+}
+
+.plate{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding:4rem;
+    min-height: 15rem;
+}
+
+.plate h3{
+    margin:0;
+    margin-bottom: 2.5rem;
+    font-size: 2.5rem;
+}
+.plate p{
+    margin:0
 }
