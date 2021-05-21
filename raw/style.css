@@ -11,18 +11,19 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+
+
 header {
   background: linear-gradient(180deg, var(--primarylight) 0%, var(--secondarylight) 100%);
-  padding-bottom: 11rem;
-  border-radius: 0 0 0 500rem;
+  min-height: 100vh;
 }
 
 nav {
   padding-right: 2rem;
   padding-left: 2rem;
   padding-top: 1.5rem;
-  display: flex;
-  flex-direction: row;
+  clear:both;
+  overflow: auto;
 }
 
 nav .logo {
@@ -33,14 +34,15 @@ nav .logo {
 
 .nav-links {
   display: flex;
-  float: right;
   position: relative;
   flex-direction: row;
+  float: right;
 }
 
 .nav-link {
   margin-right: 1em;
   text-decoration: none;
+  display: inline-block;
   color: white;
   padding: 1em 0.8em;
   max-height: 1.2em;
@@ -56,15 +58,36 @@ nav .logo {
 .logo-box {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: 4rem;
   color: black;
   padding-top: 3rem;
+  max-width: 30rem;
+  padding-left: 2rem;
+}
+
+.logo-box .tagline{
+  font-size: 1.3rem;
+  margin-top: 2rem;
 }
 
 .logo-box .logo {
-  margin: 0;
+  font-size: 6rem;
+}
+
+.logo-box .logo.lower{
+  font-size: 4rem;
+}
+
+.btn{
+  background-color: white;
+  padding: 1em;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 1rem;
+  width: fit-content;
+}
+
+.btn-primary{
+  background-color: var(--primary);
 }
 
 .plate {
@@ -74,19 +97,19 @@ nav .logo {
   flex-direction: column;
   padding: 4rem;
   min-height: 15rem;
+  background-color: white;
 }
 
 .plate h3 {
-  margin: 0;
   margin-bottom: 2.5rem;
   font-size: 2.5rem;
 }
-.plate p {
-  margin: 0;
+h1,h2,h3,h4,h6,h5,p{
+  margin:0;
 }
 
 @media screen and (max-width: 900px) {
   header {
-    border-radius: 0 0 0 10rem;
   }
+
 }
