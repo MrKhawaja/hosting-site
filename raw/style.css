@@ -19,9 +19,23 @@ header {
 
 nav {
   padding-right: 2rem;
+  padding-left: 2rem;
   padding-top: 1.5rem;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
+}
+
+nav .logo {
+  height: 5rem;
+  width: 5rem;
+  float: left;
+}
+
+.nav-links {
+  display: flex;
+  float: right;
+  position: relative;
+  flex-direction: row;
 }
 
 .nav-link {
@@ -29,6 +43,7 @@ nav {
   text-decoration: none;
   color: white;
   padding: 1em 0.8em;
+  max-height: 1.2em;
   border-radius: 1em;
 }
 .nav-link:hover {
