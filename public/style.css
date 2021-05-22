@@ -90,6 +90,7 @@ nav .nav-icon:hover {
   display: flex;
   flex-direction: column;
   color: white;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.411);
   padding-top: 3rem;
   max-width: 30rem;
   padding-left: 2rem;
@@ -108,7 +109,7 @@ nav .nav-icon:hover {
   font-size: 4rem;
 }
 
-.parrot {
+.hero {
   max-height: 30rem;
   margin-right: 5rem;
   margin-top: 3rem;
@@ -130,6 +131,7 @@ nav .nav-icon:hover {
   width: fit-content;
   cursor: pointer;
   font-weight: 600;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.365);
 }
 
 .btn-secondary:hover {
@@ -185,6 +187,7 @@ nav .nav-icon:hover {
   flex-direction: column;
   margin-left: 1rem;
   margin-right: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.295);
 }
 
 .card-title {
@@ -199,11 +202,13 @@ nav .nav-icon:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.247);
 }
 .card .card-content {
   display: flex;
   width: 100%;
   padding-left: 2rem;
+  padding-right: 2rem;
   flex-direction: column;
 }
 .card .ram {
@@ -340,7 +345,7 @@ footer .column {
   }
 }
 @media screen and (max-width: 990px) {
-  .parrot {
+  .hero {
     display: none;
   }
 }
