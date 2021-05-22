@@ -82,10 +82,6 @@ nav .nav-icon {
   display: none;
 }
 
-nav .nav-icon:hover {
-  color: var(--primaryhover);
-}
-
 .logo-box {
   display: flex;
   flex-direction: column;
@@ -167,12 +163,15 @@ nav .nav-icon:hover {
 }
 
 .container .headline {
-  margin-top: 3rem;
+  padding: 0.5rem;
+  text-align: center;
   padding-left: 3rem;
   padding-right: 3rem;
-  padding-bottom: 0.5rem;
   margin-bottom: 3rem;
-  border-bottom: black 3px solid;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.705);
 }
 
 .card {
@@ -254,6 +253,7 @@ nav .nav-icon:hover {
   width: 20rem;
   transition: all 400ms;
   margin: 1rem;
+  margin-bottom: 0;
 }
 
 .quote:hover {
@@ -308,6 +308,7 @@ footer .column {
 }
 footer .credits {
   color: white;
+  margin-top: 5rem;
 }
 footer .credits #right {
   float: right;
@@ -368,6 +369,15 @@ footer .credits #left {
   .header-box {
     display: flex;
     flex-direction: column;
+  }
+  .quote {
+    margin-top: 2.5rem;
+  }
+  .container .headline {
+    margin-top: 5rem;
+  }
+  .nav-link:hover {
+    background: none;
   }
 }
 @media screen and (max-width: 990px) {
