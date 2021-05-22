@@ -212,6 +212,7 @@ nav .nav-icon:hover {
   flex-direction: column;
 }
 .card .ram {
+  margin-left: 0.7rem;
   font-size: 2rem;
 }
 
@@ -241,6 +242,22 @@ nav .nav-icon:hover {
 
 .card .buy:hover {
   background-color: var(--primarydark);
+}
+
+.quote {
+  text-align: center;
+  color: white;
+  background-color: var(--primary);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.514);
+  padding: 1.5em 0;
+  width: 20rem;
+  transition: all 400ms;
+  margin: 1rem;
+}
+
+.quote:hover {
+  background-color: black;
 }
 
 .row {
@@ -288,6 +305,15 @@ footer .column {
 }
 .mobile {
   display: none;
+}
+footer .credits {
+  color: white;
+}
+footer .credits #right {
+  float: right;
+}
+footer .credits #left {
+  float: left;
 }
 @media screen and (max-width: 600px) {
   .row {
