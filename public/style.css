@@ -227,8 +227,14 @@ nav .nav-icon {
 
 .card .price {
   margin-left: 0.8rem;
+  margin-top: 0.4rem;
   font-weight: 500;
   font-size: 0.9rem;
+}
+.card .price .taka {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--primary);
 }
 
 .card .buy {
