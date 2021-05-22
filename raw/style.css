@@ -8,6 +8,7 @@
   --secondarydark: #009980;
   --light: #e7e7e7;
   --lighter: #f2f2f2;
+  --gray: #aaaaaa;
 }
 
 html {
@@ -96,7 +97,9 @@ nav .logo {
 }
 
 .parrot {
-  max-height: 25rem;
+  max-height: 30rem;
+  margin-right: 5rem;
+  margin-top: 3rem;
   float: right;
 }
 
@@ -229,6 +232,43 @@ nav .logo {
   margin-bottom: 4rem;
 }
 
+.row.center {
+  justify-content: center;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+a.gray {
+  color: var(--gray);
+  font-size: 0.9rem;
+  margin-top: 0.2rem;
+}
+
+a.gray:hover {
+  color: var(--light);
+  text-decoration-line: underline;
+}
+
+footer h3.title {
+  color: white;
+  font-weight: 500;
+  margin-bottom: 0.6rem;
+}
+
+footer {
+  min-height: 13rem;
+  background-color: black;
+  padding: 1rem;
+}
+
+footer .column {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
 @media screen and (max-width: 600px) {
   .row {
     flex-direction: column;
@@ -253,7 +293,13 @@ nav .logo {
   .nav-links {
     display: none;
   }
+  .column {
+    align-items: center;
+    margin-top: 1rem;
+  }
+}
+@media screen and (max-width: 990px) {
   .parrot {
-    margin-top: 3rem;
+    display: none;
   }
 }
