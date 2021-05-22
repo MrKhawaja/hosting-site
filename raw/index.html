@@ -6,6 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="normalize.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="shortcut icon" href="logo.svg" type="image/svg">
         <link rel="stylesheet" href="style.css">
         <title>Pixeledge Hosting</title>
@@ -15,14 +16,22 @@
         <header>
             <nav>
                 <img src="logo.svg" class="logo" alt="" srcset="">
-
+                <span class="material-icons nav-icon" onclick="clickNav()">
+                    reorder
+                </span>
                 <div class="nav-links">
                     <a href="" class="nav-link active">Home</a>
                     <a href="#packages" class="nav-link">Packages</a>
                     <a href="" class="nav-link">Discord</a>
                 </div>
             </nav>
+
             <div class="header-box">
+                <div id="mobile-nav" class="nav-links mobile">
+                    <a href="" class="nav-link active">Home</a>
+                    <a href="#packages" class="nav-link">Packages</a>
+                    <a href="" class="nav-link">Discord</a>
+                </div>
                 <div class="logo-box-container">
                     <div class="logo-box">
                         <h1 class="logo lower">Pixeledge</h1>
@@ -131,6 +140,12 @@
                 </div>
             </div>
         </footer>
+        <script>
+            function clickNav() {
+                const element = document.getElementById("mobile-nav");
+                element.classList.toggle("active");
+            }
+        </script>
     </body>
 
 </html>

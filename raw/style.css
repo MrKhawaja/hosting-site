@@ -74,6 +74,18 @@ nav .logo {
   background: var(--primaryhover);
 }
 
+nav .nav-icon {
+  color: white;
+  font-size: 2rem;
+  float: right;
+  cursor: pointer;
+  display: none;
+}
+
+nav .nav-icon:hover {
+  color: var(--primaryhover);
+}
+
 .logo-box {
   display: flex;
   flex-direction: column;
@@ -268,11 +280,16 @@ footer .column {
   margin-left: 2rem;
   margin-right: 2rem;
 }
-
+.mobile {
+  display: none;
+}
 @media screen and (max-width: 600px) {
   .row {
     flex-direction: column;
     margin: 0;
+  }
+  nav .nav-icon {
+    display: inline;
   }
   .card {
     margin-bottom: 2rem;
@@ -292,10 +309,33 @@ footer .column {
   }
   .nav-links {
     display: none;
+    height: 0;
+    opacity: 0;
+    background-color: var(--primarydark);
   }
-  .column {
+  .nav-links.active {
+    display: flex;
+    height: auto;
+    opacity: 1;
+    flex-direction: column;
+  }
+  .nav-link {
+    margin: 0;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    color: white;
+    padding: 1em 0.8em;
+    max-height: 1.2em;
+    border-radius: 0;
+  }
+  .nav .column {
     align-items: center;
     margin-top: 1rem;
+  }
+  .header-box {
+    display: flex;
+    flex-direction: column;
   }
 }
 @media screen and (max-width: 990px) {
