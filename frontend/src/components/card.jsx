@@ -1,5 +1,6 @@
 import React from "react";
 const Card = ({ en, title, ram, core, price, onBuy }) => {
+  if (en == undefined) en = false;
   return (
     <div className="card">
       <div className="card-title">
@@ -23,7 +24,10 @@ const Card = ({ en, title, ram, core, price, onBuy }) => {
           5GB Storage Free({en ? "$1" : "100 taka"} per 5GB Extra)
         </h4>
       </div>
-      <a onClick={onBuy} className="btn buy">
+      <a
+        onClick={() => onBuy({ en, title, ram, core, price })}
+        className="btn buy"
+      >
         Buy Now
       </a>
     </div>

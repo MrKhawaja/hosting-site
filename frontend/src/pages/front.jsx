@@ -1,50 +1,79 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Card from "../components/card";
+import CartCount from "../components/cartCount";
 import Footer from "../components/footer";
+import Lang from "../components/lang";
+import PackagesSection from "../components/packagesSection";
 
 function clickNav() {
-  const element = document.getElementById("mobile-nav");
+  const element = document.getElementById("mobile-nav1");
   element.classList.toggle("active");
 }
-const Front = ({ lang }) => {
+
+const Front = ({ lang, onLangChange, onBuyProduct, cartCount }) => {
   return (
     <>
       <header>
         <nav>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row-reverse",
+              marginBottom: "1rem",
+              fontSize: ".8rem",
+            }}
+          >
+            <a href="https://panel.alveehawak.xyz" className="nav-link">
+              Panel
+            </a>
+            <Link to="/login" className="nav-link">
+              Login
+            </Link>
+            <Link to="/register" className="nav-link">
+              Register
+            </Link>
+          </div>
           <img src="logo.svg" className="logo" alt="" srcset="" />
           <span className="material-icons nav-icon" onClick={clickNav}>
             reorder
           </span>
           <div className="nav-links">
-            <a
-              href="https://hosting.alveehawak.xyz"
-              className="nav-link active"
-            >
+            <Link to="/" className="nav-link active">
               Home
-            </a>
+            </Link>
             <a href="#packages" className="nav-link">
               Packages
             </a>
             <a href="https://discord.gg/9WAWV6qaAE" className="nav-link">
               Discord
             </a>
+            <Lang
+              className="nav-link"
+              lang={lang}
+              onLangChange={onLangChange}
+            />
+            <CartCount className="nav-link" cartCount={cartCount} />
           </div>
         </nav>
 
         <div className="header-box">
-          <div id="mobile-nav" className="nav-links mobile">
-            <a
-              href="https://hosting.alveehawak.xyz"
-              className="nav-link active"
-            >
+          <div id="mobile-nav1" className="nav-links mobile">
+            <Link to="/" className="nav-link active">
               Home
-            </a>
+            </Link>
             <a href="#packages" className="nav-link">
               Packages
             </a>
             <a href="https://discord.gg/9WAWV6qaAE" className="nav-link">
               Discord
             </a>
+            <Lang
+              className="nav-link"
+              lang={lang}
+              onLangChange={onLangChange}
+            />
+            <CartCount className="nav-link" cartCount={cartCount} />
           </div>
           <div className="logo-box-container">
             <div className="logo-box">
@@ -55,7 +84,11 @@ const Front = ({ lang }) => {
                 from the best in Bangladesh. Our service starts at 400 taka
                 monthly.
               </p>
-              <a href="#packages" className="btn btn-wide btn-secondary">
+              <a
+                href="#packages"
+                style={{ marginRight: "2rem" }}
+                className="btn btn-wide btn-secondary"
+              >
                 Buy Now
               </a>
             </div>
@@ -80,51 +113,8 @@ const Front = ({ lang }) => {
           <div className="quote">4 Years Of Experience</div>
         </div>
         <a name="packages"></a>
-        <h1 className="headline">Our Packages</h1>
-        {lang == "en" && (
-          <div className="packages">
-            <div className="row center">
-              <Card en title="Dirt-2" ram="1" core="1" price="4.99" />
-              <Card en title="Dirt-2" ram="2" core="1" price="7.99" />
-            </div>
-            <div className="row">
-              <Card en title="Iron-1" ram="3" core="2" price="12.99" />
-              <Card en title="Iron-2" ram="4" core="2" price="15.99" />
-              <Card en title="Iron-3" ram="5" core="2" price="19.99" />
-            </div>
-            <div className="row center">
-              <Card en title="Gold-1" ram="5" core="3" price="21.99" />
-              <Card en title="Gold-2" ram="6" core="3" price="24.99" />
-            </div>
-            <div className="row center">
-              <Card en title="Diamond-1" ram="6" core="4" price="26" />
-              <Card en title="Diamond-2" ram="7" core="4" price="30" />
-            </div>
-          </div>
-        )}
-        {lang == "bd" && (
-          <div className="packages">
-            <div className="row center">
-              <Card title="Dirt-2" ram="1" core="1" price="400" />
-              <Card title="Dirt-2" ram="2" core="1" price="650" />
-            </div>
-            <div className="row">
-              <Card title="Iron-1" ram="3" core="2" price="1050" />
-              <Card title="Iron-2" ram="4" core="2" price="1300" />
-              <Card title="Iron-3" ram="5" core="2" price="1550" />
-            </div>
-            <div className="row center">
-              <Card title="Gold-1" ram="5" core="3" price="1700" />
-              <Card title="Gold-2" ram="6" core="3" price="1950" />
-            </div>
-            <div className="row center">
-              <Card title="Diamond-1" ram="6" core="4" price="2100" />
-              <Card title="Diamond-2" ram="7" core="4" price="2350" />
-            </div>
-          </div>
-        )}
+        <PackagesSection onBuyProduct={onBuyProduct} lang={lang} />
       </div>
-      <Footer />
     </>
   );
 };
