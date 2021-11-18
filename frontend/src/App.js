@@ -9,6 +9,7 @@ import Packages from "./pages/packages";
 import TopBar from "./components/topBar";
 import Register from "./pages/register";
 import Nav from "./components/nav";
+import Popup from 'reactjs-popup';
 class App extends Component {
   componentDidMount = () => {
     if (localStorage.getItem("lang") === null) {
@@ -43,13 +44,18 @@ class App extends Component {
     this.setState({ cart: [] });
   };
   handleBuyProduct = (a) => {
-    var cart = this.state.cart;
-    cart.push(a);
-    this.setState({ cart });
+    if (window.confirm('Website is under construction. Please use our discord server to contact us. Open a ticket there. Hit Ok to go to our discord server.')) 
+    {
+      window.location.href='https://discord.com/invite/9WAWV6qaAE';
+    };
+    // var cart = this.state.cart;
+    // cart.push(a);
+    // this.setState({ cart });
   };
   state = {
     lang: "",
     cart: [],
+    open: false
   };
   render() {
     return (
